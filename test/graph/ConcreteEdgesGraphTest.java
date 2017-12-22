@@ -29,17 +29,31 @@ public class ConcreteEdgesGraphTest extends GraphInstanceTest {
      */
     
     // Testing strategy for ConcreteEdgesGraph.toString()
-    //   TODO
+    //   empty, (disconnected, connected), (acyclic, cyclic), updated edge
     
-    // TODO tests for ConcreteEdgesGraph.toString()
+    // tests for ConcreteEdgesGraph.toString()
     
     /*
      * Testing Edge...
      */
     
     // Testing strategy for Edge
-    //   TODO
+    //   Call get methods after modifying original references.
     
-    // TODO tests for operations of Edge
+    // tests for operations of Edge
+    @Test
+    public void testEdge()
+    {
+        String source = String.valueOf(1);
+        String target = String.valueOf(2);
+        int weight = 5;
+        Edge edge = new Edge(source, target, weight);
+        source = String.valueOf(3);
+        target = String.valueOf(4);
+        weight = 10;
+        assertEquals("source", String.valueOf(1), edge.getSource());
+        assertEquals("target", String.valueOf(2), edge.getTarget());
+        assertEquals("weight", 5, edge.getWeight());
+    }
     
 }
